@@ -7,4 +7,4 @@ URLS = {
 def get_url(env):
     return URLS[env]
 
-from .SGConnectAuth import SGConnectAuth
+from .sg_connect_auth import SGConnectAuth
