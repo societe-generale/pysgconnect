@@ -8,8 +8,7 @@ To report any bug and ask for a new feature, please create an issue.
 
 ### Your First Contribution
 
-Working on your first Pull Request? You can learn how from this *free* series, [How to Contribute to an Open Source Project on GitHub]
-(<https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github>)
+Working on your first Pull Request? You can learn how from this *free* series, [How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
 ### Submit a Pull Request
 
@@ -24,4 +23,4 @@ Working on your first Pull Request? You can learn how from this *free* series, [
 
 A good review will always help us to improve the quality of our deliverables.
 Reviews are mainly for a feedback which will help the developers to get a different perception.
-To have an effective review, please raise a PR with small amount of changes. If you have large amount of changes, the review will be more painful and less effective.
+To have an effective review, please raise a PR with small amount of changes. If you have a large amount of changes, the review will be more painful and less effective.
