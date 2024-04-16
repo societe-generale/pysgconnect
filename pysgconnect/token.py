@@ -19,6 +19,6 @@ class Token(BaseModel):
         """Validate the expiration date of the token"""
         return not self.expires_at or self.expires_at <= datetime.now(UTC)
 
-    def is_empty(self) -> bool:
+    def is_not_empty(self) -> bool:
         """Validate that the token is not empty"""
         return self.jwt != ""
