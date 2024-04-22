@@ -25,7 +25,7 @@ client_secret =
 
 session.auth = SGConnectAuth(client_id, client_secret, scopes=['myscope'], env='PRD')
 
-request = session.get('https://api.foo.socgen')
+request = session.get('https://api.sgmarkets.com/foo/v1/bar')
 ```
 
 ### Development
