@@ -24,7 +24,7 @@ for item in requirements:
 
 setup(
     name="pysgconnect",
-    use_scm_version=True,
+    version="1.0",
     url="https://github.com/societe-generale/pysgconnect",
     packages=find_packages(),
     install_requires=requires,
