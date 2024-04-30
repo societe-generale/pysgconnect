@@ -34,7 +34,6 @@ setup(
     long_description_content_type="text/markdown",
     description="Utilities to interact with SGConnect",
     python_requires=">=3.10",
-    build-backend="setuptools.build_meta",
     platforms="any",
     classifiers=[
         "Programming Language :: Python :: 3",
