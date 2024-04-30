@@ -32,10 +32,6 @@ setup(
     dependency_links=links,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    setup_requires=[
-        "setuptools_scm",
-        "wheel",
-    ],
     description="Utilities to interact with SGConnect",
     python_requires=">=3.10",
     build-backend="setuptools.build_meta",
