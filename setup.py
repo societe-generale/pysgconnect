@@ -26,6 +26,7 @@ setup(
     name="pysgconnect",
     version="1.0",
     url="https://github.com/societe-generale/pysgconnect",
+    package_dir={'':"pysgconnect"},
     packages=find_packages(),
     install_requires=requires,
     dependency_links=links,
