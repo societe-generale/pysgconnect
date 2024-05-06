@@ -19,7 +19,7 @@ class Token(BaseModel):
         """Validate the expiration date of the token"""
         if not self.expires_at:
             return True
-        
+
         return self.expires_at <= datetime.now(UTC)
 
     def is_not_empty(self) -> bool:
