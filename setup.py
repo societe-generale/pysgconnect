@@ -17,8 +17,5 @@ setup(
     description="Utilities to interact with SGConnect",
     python_requires=">=3.10",
     platforms="any",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "Support-Platform: OS Independent",
-    ],
+    classifiers=["Programming Language :: Python :: 3"],
 )
