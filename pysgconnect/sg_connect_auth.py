@@ -31,7 +31,7 @@ class SGConnectAuth(AuthBase):
         return r
 
     def _check_token(self) -> None:
-        if self._token.is_not_empty() or not self._token.is_token_expired():
+        if self._token.is_not_empty() and not self._token.is_token_expired():
             self._logger.debug("Current token valid until: %s", self._token.expires_at)
             return
 
