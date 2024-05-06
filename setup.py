@@ -19,7 +19,6 @@ setup(
     platforms="any",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License: Apache-2.0 License",
         "Support-Platform: OS Independent",
     ],
 )
