@@ -20,7 +20,6 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License: Apache-2.0 License",
-        "Keywords: sgconnect,oauth2,sg,authentication,sgmarkets,sgcib",
         "Support-Platform: OS Independent",
     ],
 )
