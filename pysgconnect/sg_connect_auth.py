@@ -1,6 +1,5 @@
 import logging
-from datetime import datetime, timedelta
-import pytz
+from datetime import UTC, datetime, timedelta
 
 from requests import Response, Session
 from requests.auth import AuthBase
