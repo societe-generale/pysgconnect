@@ -2,7 +2,7 @@
 Token object
 """
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from typing import Optional
 
 from pydantic import BaseModel
@@ -11,7 +11,7 @@ from pydantic import BaseModel
 class Token(BaseModel):
     """Token object"""
 
-    created_at: datetime = datetime.now(UTC)
+    created_at: datetime = datetime.now(timezone.utc)
     expires_at: Optional[datetime] = None
     jwt: Optional[str] = ""
 
@@ -20,7 +20,7 @@ class Token(BaseModel):
         if not self.expires_at:
             return True
 
-        return self.expires_at <= datetime.now(UTC)
+        return self.expires_at <= datetime.now(timezone.utc)
 
     def is_not_empty(self) -> bool:
         """Validate that the token is not empty"""
