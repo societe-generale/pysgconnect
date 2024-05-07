@@ -1,5 +1,5 @@
 import logging
-from datetime import UTC, datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from requests import Response, Session
 from requests.auth import AuthBase
@@ -57,6 +57,6 @@ class SGConnectAuth(AuthBase):
 
         self._token = Token(
             jwt=token_value,
-            expires_at=datetime.datetime.now(pytz.utc) + timedelta(seconds=expire_value),
+            expires_at=datetime.now(timezone.utc) + timedelta(seconds=expire_value),
         )
         self._logger.debug("New access token valid until: %s", expire_value)
