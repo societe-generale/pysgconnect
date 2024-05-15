@@ -25,10 +25,10 @@ class SGConnectAuth(AuthBase):
         self._credentials = (client_id, client_secret)
         self._scopes: list[str] | None = scopes
 
-    def __call__(self, r):
+    def __call__(self, request):
         self._check_token()
-        r.headers["Authorization"] = f"Bearer {self._token.jwt}"
-        return r
+        request.headers["Authorization"] = f"Bearer {self._token.jwt}"
+        return request
 
     def _check_token(self) -> None:
         if self._token.is_not_empty() and not self._token.is_token_expired():
@@ -42,7 +42,7 @@ class SGConnectAuth(AuthBase):
             self._endpoint,
             verify=True,
             auth=self._credentials,
-            data={"grant_type": "client_credentials", "scopes": " ".join(self._scopes)},
+            data={"grant_type": "client_credentials", "scope": " ".join(self._scopes)},
         )
 
         response.raise_for_status()
