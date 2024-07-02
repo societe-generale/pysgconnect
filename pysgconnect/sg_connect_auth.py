@@ -23,7 +23,7 @@ class SGConnectAuth(AuthBase):
         self._token: Token = Token()
 
         self._credentials = (client_id, client_secret)
-        self._proxies: dict = proxy
+        self._proxies: dict = proxies
         self._scopes: list[str] | None = scopes
 
     def __call__(self, request):
