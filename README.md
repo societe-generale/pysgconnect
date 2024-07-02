@@ -28,6 +28,15 @@ session.auth = SGConnectAuth(client_id, client_secret, scopes=['myscope'], env='
 request = session.get('https://api.sgmarkets.com/foo/v1/bar')
 ```
 
+#### Corporate proxy
+
+By default, no proxies are configured.
+
+```python
+proxies = {'https': '...', 'http': '...'}
+session.auth = SGConnectAuth(client_id, client_secret, scopes=['...'], proxies=proxies)
+```
+
 ### Development
 
 ```sh
