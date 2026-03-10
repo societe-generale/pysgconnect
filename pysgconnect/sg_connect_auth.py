@@ -13,7 +13,7 @@ class SGConnectAuth(AuthBase):
     Authentication class to use with requests to protect calls by SGConnect OAuth2 protocol
     """
 
-    def __init__(self, client_id, client_secret, env="PRD", scopes=None, proxies=None):
+    def __init__(self, client_id, client_secret, env="PRD", scopes=None, proxies=None, headers=None):
         if isinstance(scopes, str):
             scopes = [scopes]
 
@@ -24,10 +24,14 @@ class SGConnectAuth(AuthBase):
 
         self._credentials = (client_id, client_secret)
         self._proxies: dict = proxies
+        self._headers: dict = headers
         self._scopes: list[str] | None = scopes
 
     def __call__(self, request):
         self._check_token()
+        if self._headers is not None:
+            request.headers = request.headers | self._headers
+            
         request.headers["Authorization"] = f"Bearer {self._token.jwt}"
         return request
 
