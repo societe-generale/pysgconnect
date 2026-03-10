@@ -12,7 +12,7 @@ with open(requirements_path, "r", encoding="utf-8") as f:
 
 setup(
     name="pysgconnect",
-    version="2.3",
+    version="2.4",
     url="https://github.com/societe-generale/pysgconnect",
     packages=find_packages(),
     install_requires=requirements,
